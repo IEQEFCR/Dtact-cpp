@@ -12,9 +12,6 @@
 int main() {
     _yaml cfg = YAML::LoadFile("../_config.yaml");
     Camera camera(cfg);
-    // out << camera.width_begin << " " << camera.width_end << " "
-    //     << camera.height_begin << " " << camera.height_end << "\n";
-    // out << camera.raw_img_width << " " << camera.raw_img_height << "\n";
     cv::Mat img;
     camera.cap >> img;
     out << img.size() << "\n";
